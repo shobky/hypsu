@@ -1,0 +1,239 @@
+.jobs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 80px 5vw;
+    box-sizing: border-box;
+    padding-bottom: 15vh;
+    position: relative;
+    /* background-image: url('../assets/bg.gif'); */
+}
+
+.background {
+    width: 33.3vw;
+    height: 33.3vw;
+    opacity: .2;
+}
+
+.background-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.jobs-header {
+    margin-bottom: 25px;
+    font-weight: 1000;
+    font-size: 35px;
+    text-align: center;
+}
+
+.jobs-sub-header {
+    font-weight: 1000;
+    margin-bottom: 25px;
+    font-weight: 800;
+    text-align: center;
+    font-size: calc(3.5vw + 4vh);
+}
+
+.jobs-second-sub-header {
+    font-weight: 100;
+    font-size: 35px;
+    width: 70%;
+    text-align: center;
+}
+
+.jobs-img {
+    width: 80%;
+    margin-top: 100px;
+}
+
+.section-2 {
+    margin: 0 9vw;
+}
+
+.jobs-flex {
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+    margin-top: 100px;
+}
+
+.jobs-flex h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.section-2-header {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+}
+
+.section-2-header h2 {
+    font-size: 40px;
+}
+
+.jobs-search-input {
+    padding: 15px;
+    font-size: 18px;
+    height: 40px;
+    min-width: 250px;
+    border: 1px solid rgba(0, 0, 0, 0.273);
+}
+
+.jobs-titels-container {
+    margin-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    gap: 2%;
+}
+
+.jobs-titels-container li {
+    list-style: none;
+    width: 32%;
+    height: 175px;
+    margin-bottom: 2%;
+    border: 1px solid rgba(0, 0, 0, 0.228);
+    padding: 15px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+}
+
+.apply-job-title {
+    font-weight: bold;
+    font-size: 18px;
+    height: 70px;
+}
+
+.apply-btn {
+    background-color: black;
+    border: none;
+    color: white;
+    font-size: 16px;
+    letter-spacing: 1px;
+    padding: 10px 15px;
+    width: fit-content;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: ease-in-out .2s;
+}
+
+.apply-job-desc {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.apply-btn:hover {
+    background-color: rgb(68, 67, 67);
+    transition: ease-in-out .2s;
+}
+
+
+
+@media (width <=742px) {
+
+    .jobs-header {
+        margin-bottom: 25px;
+        font-weight: 1000;
+        font-size: 35px;
+        text-align: center;
+    }
+
+    .jobs-sub-header {
+        font-weight: 1000;
+        margin-bottom: 25px;
+        font-weight: 800;
+        text-align: center;
+        font-size: calc(3.5vw + 2vh);
+    }
+
+    .jobs-second-sub-header {
+        font-weight: 100;
+        font-size: 20px;
+        width: 90%;
+        text-align: center;
+    }
+
+    .jobs-flex {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 35px;
+        margin-top: 100px;
+    }
+
+    .section-2-header {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        margin-top: 100px;
+    }
+
+    .jobs-titels-container {
+        margin-top: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .jobs-titels-container li {
+        list-style: none;
+        width: 100%;
+        height: 200px;
+        margin-bottom: 25px;
+        border: 1px solid rgba(0, 0, 0, 0.228);
+        padding: 15px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: left;
+    }
+
+
+    .apply-job-title {
+        font-weight: bold;
+        font-size: 22px;
+        height: 70px;
+    }
+
+    .apply-btn {
+        background-color: black;
+        border: none;
+        color: white;
+        font-size: 16px;
+        letter-spacing: 1px;
+        padding: 8px 10px;
+        width: fit-content;
+        margin-top: 10px;
+        cursor: pointer;
+        transition: ease-in-out .2s;
+    }
+
+    .apply-job-desc {
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+
+    .section-2-header h2 {
+        font-size: 30px;
+    }
+
+    .jobs-search-input {
+        padding: 15px;
+        font-size: 16px;
+        height: 40px;
+        min-width: 250px;
+        border: 1px solid rgba(0, 0, 0, 0.358);
+    }
+
+
+}

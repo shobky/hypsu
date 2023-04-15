@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import './jobs.css'
 import img from '../assets/hero.webp'
 import { useNavigate } from 'react-router'
-import bg from '../assets/bg.gif'
 const Jobs = ({ jobTitles, handleClickedTitle }) => {
   const [searchQ, setSearchQ] = useState('')
 

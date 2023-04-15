@@ -4,10 +4,12 @@ import { useLocation } from 'react-router';
 import { doc, setDoc } from 'firebase/firestore';
 import { db, storage } from '../../firebase/Config';
 import { ref, uploadBytes } from 'firebase/storage';
+import { ImSpinner8 } from 'react-icons/im'
 
-const Form = () => {
-    const location = useLocation();
-    const [formattedPathname, setFormattedPathname] = useState('');
+const Form = ({ pathname }) => {
+    const [formattedPathname, setFormattedPathname] = useState(true);
+
+    const [submited, setSubmited] = useState(false)
 
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
@@ -23,17 +25,14 @@ const Form = () => {
     const handleSubmit = async (e) => {
 
         e.preventDefault();
+        setSubmited('loading')
 
         const REsumeStorageRef = ref(storage, `${email}-${resume.name}`);
-        await uploadBytes(REsumeStorageRef, resume).then((snapshot) => {
-            console.log('Uploaded resume!');
-        });
+        await uploadBytes(REsumeStorageRef, resume)
 
         if (coverLetter) {
             const CoverStorageRef = ref(storage, `${email}-${coverLetter.name}`);
-            await uploadBytes(CoverStorageRef, coverLetter).then((snapshot) => {
-                console.log('Uploaded coverLetter!');
-            });
+            await uploadBytes(CoverStorageRef, coverLetter)
         }
 
 
@@ -48,7 +47,10 @@ const Form = () => {
             referralNumber
         });
 
-        console.log('done')
+        setSubmited(true)
+        setTimeout(() => {
+            setSubmited(false)
+        }, 1200);
     };
 
     function formatPathname(pathname) {
@@ -60,9 +62,9 @@ const Form = () => {
     }
 
     useEffect(() => {
-        const updatedPathname = formatPathname(location.pathname);
+        const updatedPathname = formatPathname(pathname);
         setFormattedPathname(updatedPathname);
-    }, [location.pathname]);
+    }, [pathname]);
 
     return (
         <div className="form-container">
@@ -161,7 +163,7 @@ const Form = () => {
                             />
                         </div>
                     </div>
-                    <button className='submit-btn' type="submit">Submit</button>
+                    <button className={submited === true ? 'submit-btn__done' : 'submit-btn'} type="submit">{submited === 'loading' ? <ImSpinner8 className="form-spinner" /> : submited  ? 'Done' : 'Submit'}</button>
                 </form>
             </div>
         </div>

@@ -6,12 +6,13 @@
     box-sizing: border-box;
     padding-bottom: 15vh;
     position: relative;
+    z-index: 2;
     /* background-image: url('../assets/bg.gif'); */
 }
 
 .background {
     width: 33.3vw;
-    height: 33.3vw;
+    height: 50vh;
     opacity: .2;
 }
 
@@ -237,3 +238,4 @@
 
 
 }
+

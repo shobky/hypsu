@@ -3,6 +3,8 @@
     justify-content: center;
     margin-top: 75px;
     padding-bottom: 100px;
+    z-index: 2;
+    position: relative;
 }
 
 .form-container form {
@@ -34,6 +36,7 @@
     border-bottom: 1px solid rgba(0, 0, 0, 0.463);
     padding: 10px;
     margin-top: 15px;
+    background-color: transparent;
 }
 
 .form-group input:focus {
@@ -54,6 +57,9 @@
     margin-top: 20px;
     color: white;
     font-size: 18px;
+    width: 150px;
+    text-align: center;
+    height: 60px;
 }
 
 .submit-btn:hover {
@@ -61,6 +67,34 @@
     background-color: rgb(75, 74, 74);
 }
 
+.submit-btn__done {
+    float: right;
+    border: none;
+    padding: 15px 50px;
+    margin-top: 20px;
+    font-size: 18px;
+    background-color: rgb(0, 207, 41) !important;
+    color: white ;
+    transition: ease-in-out .2s;
+    width: 150px;
+    text-align: center;
+    height: 60px;
+}
+
+.form-spinner {
+    animation: spinner .5s infinite linear;
+}
+
+@keyframes spinner {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
 
 @media (width <=600px) {
     .form-double-group {
@@ -76,13 +110,14 @@
         flex-direction: column;
         align-items: center;
     }
+
     .form-group {
         width: 100%;
         min-width: 250px;
         display: flex;
         flex-direction: column;
         margin: 25px 0;
- 
+
     }
-  
+
 }

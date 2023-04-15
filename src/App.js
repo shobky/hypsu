@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import { Route, Routes } from 'react-router'
+import React, { useEffect, useState } from 'react'
+import { Route, Routes, useLocation } from 'react-router'
 import Jobs from './pages/Jobs'
 import Form from './pages/form/Form'
 import bg from './assets/bg.gif'
@@ -7,6 +7,17 @@ import bg from './assets/bg.gif'
 const App = () => {
 
     const [clickedTitle, setClicekTitle] = useState('')
+
+    const { pathname } = useLocation();
+
+    useEffect(() => {
+        window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: 'smooth'
+        });
+    }, [pathname]);
+
 
     const handleClickedTitle = (title) => {
         setClicekTitle(title)
@@ -63,6 +74,7 @@ const App = () => {
                             path={`/${job}`}
                             element={
                                 <Form
+                                    pathname={pathname}
                                     job={job}
                                     clickedTitle={clickedTitle}
                                 />

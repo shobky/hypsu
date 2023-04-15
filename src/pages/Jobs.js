@@ -49,7 +49,7 @@ const Jobs = ({ jobTitles, handleClickedTitle }) => {
                 }
               }).map((job) => (
                 <li>
-                  <p className='apply-job-desc'>descreption for</p>
+                  <p className='apply-job-desc'>Join us as a</p>
                   <p className='apply-job-title'>{job}</p>
                   <button onClick={() => handleClickBtn(job)} className='apply-btn'>Apply now</button>
                 </li>

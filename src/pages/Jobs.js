@@ -16,7 +16,7 @@ const Jobs = ({ jobTitles, handleClickedTitle }) => {
    
       <div className='jobs'>
         <h1 className='jobs-header'>Hypso</h1>
-        <h2 className='jobs-sub-header'>Come work wiht us</h2>
+        <h2 className='jobs-sub-header'>Come work with us</h2>
         <h3 className='jobs-second-sub-header'>Let's build a more productive future for the advertising industry. </h3>
         <img className='jobs-img' alt='' src={img} />
         <section className='section-2'>
